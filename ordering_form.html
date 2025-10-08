@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>₍^. .^₎⟆ - Menu</title>
+    <style>
+        /* General Styles */
+        body {
+            background: #F88FB0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding-bottom: 50px;
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background: #F62E70;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 0.8rem 1rem;
+        }
+        
+        .navbar-brand {
+            color: white !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-link {
+            color: white !important;
+            padding: 8px 15px !important;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link:focus {
+            color:  #F62E70;
+            transform: translateY(-2px);
+        }
+        
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        .active {
+            background-color:  #F62E70;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .nav-item {
+            margin: 0 5px;
+        }
+
+        .blue-theme {
+            --bs-primary: #F62E70;
+            --bs-primary-rgb: 13, 110, 253;
+            --bs-primary-bg-subtle:  #F62E70;
+        }
+        
+        .order-container {
+            background-color: #e77297;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        
+        .menu-item {
+            border-left: 3px solid var(--bs-primary);
+            margin-bottom: 15px;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .food-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+            border: 2px solid #F88FB0;
+        }
+        
+        .menu-text {
+            flex-grow: 1;
+        }
+        
+        .price-tag {
+            font-weight: bold;
+            color:  #F62E70;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            background-color: #F62E70;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        
+        .back-btn:hover {
+            background-color: #f63f7c;;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="blue-theme">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-coffee me-2"></i>DK Caffè</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ordering_form.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container py-5">
+        <div class="order-container p-4 mb-4">
+            <h1 class="text-primary mb-4 text-center">Order Here૮ ․ ․ ྀིა</h1>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-primary mb-3">Menu:</h3>
+                    
+                    <div class="form-check menu-item">
+                        <img src="https://i.pinimg.com/1200x/a5/7b/ad/a57bad295cdd48812e92cd6053519850.jpg" class="food-img" alt="Strawberry Matcha">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item1" value=125>
+                            <label class="form-check-label" for="item1">Strawberry Matcha</label>
+                            <div class="price-tag">₱125.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check menu-item">
+                        <img src="https://i.pinimg.com/1200x/58/af/49/58af49e1edaf71fae789ee0370f7caff.jpg" class="food-img" alt="Croissant with Nutella">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item2" value=100>
+                            <label class="form-check-label" for="item2">Croissant with Nutella</label>
+                            <div class="price-tag">₱100.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check menu-item">
+                        <img src="https://i.pinimg.com/1200x/21/15/25/2115253a6bbb7e347fe8239dacc53def.jpg" class="food-img" alt="Pomegranate Black Tea">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item3" value=140>
+                            <label class="form-check-label" for="item3">Pomegranate Black Tea</label>
+                            <div class="price-tag">₱140.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check menu-item">
+                        <img src="https://i.pinimg.com/736x/e9/a0/b7/e9a0b725ccb29ee307a3cec729d72e8e.jpg" class="food-img" alt="Cheese Rolls">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item4" value=30>
+                            <label class="form-check-label" for="item4">Cheese Rolls</label>
+                            <div class="price-tag">₱30.00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check menu-item">
+                        <img src="https://i.pinimg.com/736x/99/7e/c4/997ec4b70d360c96697eada2299c7c8f.jpg" class="food-img" alt="Bottled Water">
+                        <div class="menu-text">
+                            <input class="form-check-input" type="checkbox" id="item5" value=20>
+                            <label class="form-check-label" for="item5">Bottled Water</label>
+                            <div class="price-tag">₱20.00</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h3 class="text-primary mb-3">Customer Details:</h3>
+                    <div class="mb-3">
+                        <label for="customer" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="customer" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact_number" class="form-label">Contact Number</label>
+                        <input type="text" class="form-control" id="contact_number" placeholder="Enter your contact number">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-grid gap-2 col-md-6 mx-auto mt-4">
+                <button class="btn btn-primary btn-lg" type="submit" py-click="create_order">Create Order</button>
+            </div>
+        </div>
+        
+        <div class="order-container p-4">
+            <h3 class="text-primary mb-3">Order Summary:</h3>
+            <div id="order_output1" class="mb-2"></div>
+            <div id="order_output2" class="mb-2"></div>
+            <div id="order_output3" class="mb-2"></div>
+            <div id="show" class="h4 text-primary mt-3"></div>
+        </div>
+    </div>
+    
+    <center>
+        <a href="index.html">
+            <button class="back-btn">
+                <i class="fas fa-arrow-left me-2"></i>Back to Home
+            </button>
+        </a>
+    </center>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="py" src="main2.py"></script>
+</body>
+</html>
